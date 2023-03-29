@@ -15,5 +15,6 @@
         },
         "debug": false
     },
-    "port": 17500
+    "port": 17500,
+    "ZON": 1
 }

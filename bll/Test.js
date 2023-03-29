@@ -1,13 +1,17 @@
 module.exports = { 
     envioTest: () => {
-        return new Promise(async (resolve, reject) => {
-            console.log('Test de comunicacion');
+        return new Promise(async (resolve, reject) => {            
             try {
-                await knex.raw(`SELECT NOM FROM APAREMP WHERE ZON = 1`)
+                console.log(`TEST DE COMUNICACION`)
+                let sql = `SELECT NOM FROM APAREMP WHERE ZON = ${config.ZON}`
+                console.log(sql)
+                await knex.raw(sql)
                 .then((resp) => {
-                    if(resp.length > 0){                        
+                    if(resp.length > 0){
+                        console.log(`Hay comunicacion con la empresa: ${resp[0].NOM}`)
                         resolve(`Hay comunicacion con la empresa: ${resp[0].NOM}`)
-                    }  else {                        
+                    }  else {
+                        console.log(`Hay comunicacion pero no hay empresa`)
                         resolve(`Hay comunicacion pero no hay empresa`)
                     }
                 })

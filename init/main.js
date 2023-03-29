@@ -26,14 +26,6 @@ app.listen(config.port, () => {
 
 require('./config-app.js');
 
-const options = {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-};
 require('log-timestamp');
 
 app.use(function(err, req, res, next) {
