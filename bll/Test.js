@@ -9,7 +9,7 @@ module.exports = {
                 .then((resp) => {
                     if(resp.length > 0){
                         console.log(`Hay comunicacion con la empresa: ${resp[0].NOM}`)
-                        resolve(`Hay comunicacion con la empresa: ${resp[0].NOM}`)
+                        resolve(`Hay comunicacion con la empresa: ${resp[0].NOM.trim()}`)
                     }  else {
                         console.log(`Hay comunicacion pero no hay empresa`)
                         resolve(`Hay comunicacion pero no hay empresa`)
