@@ -1,0 +1,19 @@
+{
+    "db": {
+        "client": "mssql",
+        "connection": {
+            "host": "10.231.45.205",
+            "user": "usuario",
+            "password": "password",
+            "database": "base",
+            "options": {
+                "enableArithAbort": true,
+                "encrypt": false,
+                "instanceName": "sql2019"
+            }
+
+        },
+        "debug": false
+    },
+    "port": 17500
+}
